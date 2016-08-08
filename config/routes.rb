@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :videos
+
+    root to: "videos#index"
+  end
+
   resources :videos, only: [:index, :show]
 
   root 'videos#index'
