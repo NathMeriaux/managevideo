@@ -1,15 +1,19 @@
-<h1>Tous mes montages</h1>
+<div class="container">
+  <h1>Tous mes montages</h1>
 
-<ul>
-  <% @videos.each do |video| %>
-  <li>
-    <h2><%= video.name %></h2>
-    <h5><%= video.category %></h5>
-    <p><%= video.description %></p>
-  </li>
+  <ul>
+    <% @videos.each do |video| %>
+    <li>
+      <h2><%= video.name %></h2>
+      <h5><%= video.category %></h5>
+      <p><%= link_to "Voir la vidéo", video.url, :target => "_blank" %></p>
+      <p><%= video.description %></p>
+      <p><%= video.date.to_date %></p>
+    </li>
 
-  <%= link_to "voir cette vidéo", video_path(video) %>
+    <%= link_to "Voir les détails de cette vidéo", video_path(video) %>
 
-  <% end %>
+    <% end %>
 
-</ul>
+  </ul>
+</div>

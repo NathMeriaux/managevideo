@@ -1,8 +1,11 @@
-<h1>Détail d'un montage vidéo</h1>
+<div class="container">
+  <h1>Détail d'un montage vidéo</h1>
 
-<h2><%= @video.name %></h2>
-<h5><%= @video.category %></h5>
-<p><%= @video.description %></p>
-<p><%= @video.date %></p>
+  <h2>Nom : <%= @video.name %></h2>
+  <h5>Catégorie : <%= @video.category %></h5>
+  <p><%= link_to "Voir la vidéo", @video.url, :target => "_blank" %></p>
+  <p>Description : <%= @video.description %></p>
+  <p>Date de réalisation : <%= @video.date.to_date %></p>
 
-<%= link_to "Retour à la liste des vidéos", videos_path %>
+  <%= link_to "Retour à la liste des vidéos", videos_path %>
+</div>
