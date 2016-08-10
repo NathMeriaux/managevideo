@@ -12,10 +12,9 @@ class VideoDashboard < Administrate::BaseDashboard
     name: Field::String,
     description: Field::Text,
     url: Field::String,
-    category: Field::String,
+    category: Field::Select.with_options(collection: [:documentaire, :concert, :corporate, :clip]),
     date: Field::DateTime,
     realisation: Field::String,
-    type: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -28,8 +27,9 @@ class VideoDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :name,
-    :description,
+    :date,
     :url,
+    :created_at,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -42,7 +42,6 @@ class VideoDashboard < Administrate::BaseDashboard
     :category,
     :date,
     :realisation,
-    :type,
     :created_at,
     :updated_at,
   ].freeze
@@ -57,7 +56,6 @@ class VideoDashboard < Administrate::BaseDashboard
     :category,
     :date,
     :realisation,
-    :type,
   ].freeze
 
   # Overwrite this method to customize how videos are displayed
