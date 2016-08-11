@@ -4,11 +4,14 @@
   <ul>
     <% @videos.each do |video| %>
     <li>
-      <h2><%= video.name %></h2>
-      <h5><%= video.category %></h5>
-      <p><%= link_to "Voir la vidéo", video.url, :target => "_blank" %></p>
-      <p><%= video.description %></p>
-      <p><%= video.date.to_date %></p>
+      <h2>Nom : <%= video.name %></h2>
+      <h5>Catégorie : <%= video.category %></h5>
+      <% if video.url? %>
+        <iframe width="300" height="169" src=<%= video.url %> frameborder="0" allowfullscreen></iframe>
+      <% end %>
+
+      <p>Description : <%= video.description %></p>
+      <p>Date de réalisation : <%= video.date.to_date %></p>
     </li>
 
     <%= link_to "Voir les détails de cette vidéo", video_path(video) %>

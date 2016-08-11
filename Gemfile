@@ -30,6 +30,7 @@ gem 'simple_form'
 gem "administrate", "~> 0.2.2"
 gem 'bourbon'
 gem "figaro"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

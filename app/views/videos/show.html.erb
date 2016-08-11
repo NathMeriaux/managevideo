@@ -3,6 +3,7 @@
 
   <h2>Nom : <%= @video.name %></h2>
   <h5>Catégorie : <%= @video.category %></h5>
+  <iframe width="640" height="360" src=<%= @video.url %> frameborder="0" allowfullscreen></iframe>
   <p><%= link_to "Voir la vidéo", @video.url, :target => "_blank" %></p>
   <p>Description : <%= @video.description %></p>
   <p>Date de réalisation : <%= @video.date.to_date %></p>
