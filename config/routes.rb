@@ -6,7 +6,14 @@ Rails.application.routes.draw do
     root to: "videos#index"
   end
 
-  resources :videos, only: [:index, :show]
+  resources :videos, only: [:index, :show, :clip] do
+    collection do
+      get 'clip' => 'videos#clip'
+      get 'corporate' => 'videos#corporate'
+      get 'concert' => 'videos#concert'
+      get 'documentaire' => 'videos#documentaire'
+    end
+  end
 
   root 'videos#index'
 

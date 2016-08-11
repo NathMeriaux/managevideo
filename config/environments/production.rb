@@ -77,6 +77,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # necessary code to work with videojs_rails gem.
 
 end

@@ -9,6 +9,21 @@ class VideosController < ApplicationController
     @video = Video.find(params[:id])
   end
 
+  def clip
+    @clip_videos = Video.where(category: 'clip')
+  end
+
+  def corporate
+    @corporate_videos = Video.where(category: 'corporate')
+  end
+
+  def concert
+    @concert_videos = Video.where(category: 'concert')
+  end
+
+  def documentaire
+    @documentaire_videos = Video.where(category: 'documentaire')
+  end
 
   private
 
