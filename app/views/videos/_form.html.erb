@@ -2,7 +2,7 @@
 
   <%= f.input :name %>
   <%= f.input :description %>
-  <%= f.input :category %>
+  <%= f.input :category, collection: Video::CATEGORIES, prompt: "Choisir le type de vidéo" %>
   <%= f.input :type %>
   <%= f.input :url %>
 

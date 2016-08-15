@@ -24,6 +24,21 @@
   width: 50px;
 }
 
+.navbar-wagon-brand {
+  font-size: 50px;
+  color: #7F027F;
+  font-family: "Amatic SC";
+  font-weight: bold;
+}
+
+.navbar-wagon-brand:hover {
+  text-decoration: none;
+  color: #F4007A;
+  font-size: 50px;
+}
+
+
+
 /* Navbar right section (with form, links, button) */
 .navbar-wagon-right {
   display: flex;

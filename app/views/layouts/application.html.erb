@@ -2,7 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Managevideo</title>
+  <title><%= yield(:title).blank? ? "ManageVideo" : yield(:title) %></title>
+  <meta name="description"
+        content="<%= (yield(:description) || "").squish %>">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -12,7 +15,13 @@
 </head>
 <body>
 
-<%= yield %>
+  <%= render "shared/navbar" %>
 
+  <%= yield %>
+
+  <%= render 'shared/footer' %>
+
+  <%= javascript_include_tag 'application' %>
+  <%= yield(:js) %>
 </body>
 </html>

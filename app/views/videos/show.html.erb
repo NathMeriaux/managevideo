@@ -1,10 +1,18 @@
-<div class="container">
-  <h1>Détail d'un montage vidéo</h1>
+<% content_for(:title) do %>
+  <%= @video.name %> est sur ManageVideo
+<% end %>
+<% content_for(:description) do %>
+  <%= @video.description %>
+<% end %>
 
-  <h2>Nom : <%= @video.name %></h2>
+<div class="container text-center">
+  <h1 class="text-center">Détail d'un montage vidéo</h1>
+
+  <h2><%= @video.name %></h2>
   <h5>Catégorie : <%= @video.category %></h5>
   <iframe width="640" height="360" src=<%= @video.url %> frameborder="0" allowfullscreen></iframe>
   <p>Description : <%= @video.description %></p>
+  <p>Réalisation : <%= @video.realisation %></p>
   <p>Date de réalisation : <%= @video.date.to_date %></p>
 
   <%= link_to "Retour à la liste des vidéos", videos_path %>
