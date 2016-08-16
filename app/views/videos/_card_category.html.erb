@@ -4,7 +4,7 @@
 <h2 class="card-title"><%= link_to video.name, video_path(video) %></h2>
 <h5>Catégorie : <%= video.category %></h5>
 <% if video.url? %>
-  <iframe width="300" height="169" src=<%= video.url %> frameborder="0" allowfullscreen></iframe>
+  <iframe width="330" height="186" src=<%= video.url %> frameborder="0" allowfullscreen></iframe>
 <% else %>
   <%= video.file %>
 <% end %>

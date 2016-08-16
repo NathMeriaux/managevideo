@@ -21,6 +21,7 @@
 .img-card img{
   width: 100%;
   height: 200px;
+  position: center;
   object-fit:cover;
   transition: all .25s ease;
 }
@@ -39,10 +40,11 @@
 }
 .card-read-more {
   border-top: 1px solid #D4D4D4;
+  padding-top: 8px;
 }
 .card-read-more a {
   text-decoration: none !important;
   padding:10px;
-  font-weight:600;
-  text-transform: uppercase
+  margin-top: 5px;
+  font-weight:500;
 }
