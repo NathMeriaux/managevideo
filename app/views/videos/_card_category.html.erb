@@ -1,0 +1,15 @@
+<div class="card">
+<div class="card-content">
+
+<h2 class="card-title"><%= link_to video.name, video_path(video) %></h2>
+<h5>Catégorie : <%= video.category %></h5>
+<% if video.url? %>
+  <iframe width="300" height="169" src=<%= video.url %> frameborder="0" allowfullscreen></iframe>
+<% else %>
+  <%= video.file %>
+<% end %>
+
+<p>Description : <%= video.description %></p>
+<p>Date de réalisation : <%= video.date.to_date %></p>
+</div>
+</div>

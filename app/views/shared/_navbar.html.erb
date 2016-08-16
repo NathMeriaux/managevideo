@@ -1,9 +1,24 @@
 <div class="navbar-wagon navbar-wagon-fixed">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <i class="fa fa-video-camera" aria-hidden="true"></i> ManageVideo
+  <%= link_to root_path, class: "navbar-wagon-item navbar-wagon-brand" do %>
+    <p><i class="fa fa-video-camera" aria-hidden="true"></i> ManageVideo</p>
   <%end%>
 
+<!--Left Menu -->
+<div class="navbar-wagon-left hidden-xs hidden-sm">
+  <div>
+    <%= link_to "Corporate", corporate_videos_path, class: "navbar-wagon-item navbar-wagon-link"  %>
+  </div>
+  <div>
+    <%= link_to "Clip", clip_videos_path, class: "navbar-wagon-item navbar-wagon-link"  %>
+  </div>
+  <div>
+    <%= link_to "Concert", concert_videos_path, class: "navbar-wagon-item navbar-wagon-link"  %>
+  </div>
+  <div>
+    <%= link_to "Documentaire", documentaire_videos_path, class: "navbar-wagon-item navbar-wagon-link"  %>
+  </div>
+</div>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 

@@ -1,24 +1,29 @@
-<div class="container">
-  <h1 class="text-center">Tous mes montages</h1>
-  <div class="row">
+ <div class="wrapper grey">
+  <div class="container">
+    <h1 class="text-center">Tous mes montages</h1>
+    <div class="row">
 
-      <% @videos.each do |video| %>
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-          <h2><%= link_to video.name, video_path(video) %></h2>
-          <h4 style="font-weight:bold">Catégorie : <%= video.category %></h4>
-          <% if video.url? %>
-            <iframe width="300" height="169" src=<%= video.url %> frameborder="0" allowfullscreen></iframe>
-          <% end %>
+        <% @videos.each do |video| %>
+          <div class="col-xs-12 col-sm-6 col-lg-4">
 
-          <p>Description : <%= video.description %></p>
-          <p>Date de réalisation : <%= video.date.to_date %></p>
+            <h2><%= link_to video.name, video_path(video) %></h2>
+            <h4 style="font-weight:bold">Catégorie : <%= video.category %></h4>
+            <% if video.url? %>
+              <iframe width="300" height="169" src=<%= video.url %> frameborder="0" allowfullscreen></iframe>
+            <% else %>
+              <%= video.file %>
+            <% end %>
 
-
-        <%= link_to "Voir les détails de cette vidéo", video_path(video) %>
-        </div>
-      <% end %>
-
+            <p>Description : <%= video.description %></p>
+            <p>Date de réalisation : <%= video.date.to_date %></p>
 
 
+          <%= link_to "Voir les détails de cette vidéo", video_path(video) %>
+          </div>
+        <% end %>
+
+
+
+    </div>
   </div>
 </div>

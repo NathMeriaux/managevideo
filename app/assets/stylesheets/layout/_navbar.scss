@@ -25,18 +25,25 @@
 }
 
 .navbar-wagon-brand {
-  font-size: 50px;
-  color: #7F027F;
+  font-size: 40px;
+  color: #616668;
   font-family: "Amatic SC";
   font-weight: bold;
+  margin-top: 12px;
 }
 
 .navbar-wagon-brand:hover {
   text-decoration: none;
   color: #F4007A;
-  font-size: 50px;
+  font-size: 43px;
+  transition: 0.3s;
 }
 
+.navbar-wagon-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 
 /* Navbar right section (with form, links, button) */
@@ -59,7 +66,7 @@
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: #F4007A;
   text-decoration: none;
 }
 
@@ -69,15 +76,15 @@
   padding: 0 20px;
   border-radius: 20em;
   line-height: 40px;
-  background-color: #D23333;
+  background-color: #F4007A;
   color: white;
   font-size: 14px;
-  border: 2px solid #D23333;
+  border: 2px solid #F4007A;
 }
 .navbar-wagon-button:hover {
   color: white;
-  background: #D23333;
-  border-color: #ac2626;
+  background: #F4007A;
+  border-color: #F4007A;
 }
 
 /* Navbar search form */
@@ -130,7 +137,7 @@
 }
 .navbar-wagon-dropdown-menu li > a:hover {
   background: transparent !important;
-  color: black !important;
+  color: #F4007A !important;
 }
 .navbar-wagon-dropdown-menu:before {
   content: ' ';
