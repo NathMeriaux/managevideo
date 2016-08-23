@@ -25,18 +25,17 @@
 }
 
 .navbar-wagon-brand {
-  font-size: 40px;
+  font-size: 25px;
   color: #616668;
   font-family: "Amatica SC";
   font-weight: bold;
-  margin-top: 12px;
 }
 
 .navbar-wagon-brand:hover {
   text-decoration: none;
   color: #F4007A;
-  font-size: 43px;
-  transition: 0.3s;
+  font-size: 28px;
+  transition: 0.3s, ease;
 }
 
 .navbar-wagon-left {
@@ -126,6 +125,7 @@
   margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
   border-color: #E6E6E6;
+  left: -140px;
 }
 .navbar-wagon-dropdown-menu li > a {
   transition: color 0.3s ease;
