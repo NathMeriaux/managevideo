@@ -18,13 +18,16 @@
   width: 100%;
 }
 
+
+
 .navbar-bootstrap-brand {
   font-size: 25px;
   color: #616668;
   font-family: "Amatica SC";
   font-weight: bold;
-}
+  padding: 15px 20px;
 
+}
 .navbar-bootstrap-brand:hover {
   text-decoration: none;
   color: #F4007A;
@@ -60,4 +63,8 @@
 
 .navbar-inverse {
   border-color: none;
+}
+
+.navbar {
+  margin-bottom: 1px;
 }

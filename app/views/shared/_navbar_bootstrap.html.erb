@@ -1,31 +1,37 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <!-- Logo -->
+  <%= link_to root_path, class: "navbar-bootstrap-brand" do %>
+    <i class="fa fa-video-camera" aria-hidden="true"></i> ManageVideo
+  <%end%>
 
 
 
-  <nav class="navbar navbar-default navbar-fixed-top">
+  </div>
+  <div id="navbar" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li><%= link_to "Toutes les vidéos", root_path, class: "hidden-lg hidden-md" %></li>
+        <li><%= link_to "Corporate", corporate_videos_path %></li>
+        <li><%= link_to "Clip", clip_videos_path %></li>
+        <li><%= link_to "Concert", concert_videos_path %></li>
+        <li><%= link_to "Documentaire", documentaire_videos_path %></li>
+    </ul>
 
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <!-- Logo -->
-    <%= link_to root_path, class: "navbar-wagon-item navbar-wagon-brand" do %>
-      <i class="fa fa-video-camera" aria-hidden="true"></i> ManageVideo
-    <%end%>
+    <div class="navbar pull-right hidden-xs hidden-sm">
 
-
-
+      <!-- Button (call-to-action) -->
+      <%= link_to "Voir toutes les vidéos", root_path, class: "navbar-wagon-button btn" %>
     </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><%= link_to "Toutes les vidéos", root_path, class: "active" %></li>
-          <li><%= link_to "Corporate", corporate_videos_path %></li>
-          <li><%= link_to "Clip", clip_videos_path %></li>
-          <li><%= link_to "Concert", concert_videos_path %></li>
-          <li><%= link_to "Documentaire", documentaire_videos_path %></li>
-      </ul>
-    </div><!--/.nav-collapse -->
+
+  </div><!--/.nav-collapse -->
+
+
 
 </nav>
