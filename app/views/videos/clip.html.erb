@@ -1,11 +1,13 @@
-<div class="container">
-  <h1 class="text-center padded">Montages de clips</h1>
-  <div class="row">
-    <% @clip_videos.each do |video| %>
-      <div class="col-xs-12 col-sm-6 col-lg-4">
-        <%= render "card_category", video: video %>
-      </div>
-    <% end %>
+<div class="card-wrapper">
+  <div class="container">
+    <h1 class="text-center padded">Montages de clips</h1>
+    <div class="row">
+      <% @clip_videos.each do |video| %>
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <%= render "card_category", video: video %>
+        </div>
+      <% end %>
+    </div>
+    <%= link_to "Retour à la liste des vidéos", videos_path %>
   </div>
-  <%= link_to "Retour à la liste des vidéos", videos_path %>
 </div>
