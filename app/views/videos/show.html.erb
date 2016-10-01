@@ -11,12 +11,14 @@
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
 
       <h2><%= @video.name %></h2>
-      <% if @video.url? %>
-        <h5>Catégorie : <%= @video.category %></h5>
-        <iframe width="640" height="360" src=<%= @video.url %> frameborder="0" allowfullscreen></iframe>
-      <% else %>
-        <%= @videdo.file %>
-      <% end %>
+      <div class="videowrapper">
+        <% if @video.url? %>
+          <h5>Catégorie : <%= @video.category %></h5>
+          <iframe width="640" height="360" src=<%= @video.url %> frameborder="0" allowfullscreen></iframe>
+        <% else %>
+          <%= @videdo.file %>
+        <% end %>
+      </div>
       <p><strong>Description</strong> : <%= @video.description %></p>
       <p><strong>Réalisation</strong> : <%= @video.realisation %></p>
       <p><strong>Date de réalisation</strong> : <%= @video.date.to_date %></p>
