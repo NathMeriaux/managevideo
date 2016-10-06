@@ -1,0 +1,37 @@
+<div class="card-wrapper">
+  <div class="container">
+
+    <div class="row">
+      <h1 class="text-center">Tous mes montages</h1>
+      <% @videos.each do |video| %>
+
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+
+          <div class="card list-group">
+
+            <div class="card-content">
+              <h2 class="card-title"><%= link_to video.name, video_path(video) %></h2>
+              <h4><strong>Catégorie :</strong> <%= video.category %></h4>
+              <div class="videowrapper">
+                <% if video.url? %>
+                  <iframe  src=<%= video.url %> frameborder="0" allowfullscreen autoplay=""></iframe>
+                <% else %>
+                  <%= video.file %>
+                <% end %>
+              </div>
+
+              <p><strong>Description :</strong> <%= video.description %></p>
+              <p><strong>Date de réalisation :</strong> <%= video.date.to_date %></p>
+              <p class="card-read-more"><%= link_to "Voir les détails de cette vidéo", video_path(video) %>
+              </p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+
+
+

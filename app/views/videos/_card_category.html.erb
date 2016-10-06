@@ -6,9 +6,10 @@
       <h5>Catégorie : <%= video.category %></h5>
       <div class="videowrapper">
         <% if video.url? %>
-          <iframe src=<%= video.url %> frameborder="0" allowfullscreen></iframe>
+          <video src=<%= video.url %> frameborder="0" allowfullscreen autoplay="false"></video>
         <% else %>
-          <%= video.file %>
+         <%= cl_video_tag(video.file) %>
+
         <% end %>
       </div>
 

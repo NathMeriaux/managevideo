@@ -1,1 +1,40 @@
 // Your footer style
+
+.footer {
+  background-color: #8AD7E2;
+  padding: 10px;
+}
+.footer p {
+  color: gray;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer a:hover {
+  color: #2396A6;
+  transition: 0.3s, ease;
+}
+.footer h4, h6 {
+  color: grey;
+}
+
+/* Footer button */
+.footer-btn a {
+  margin-right: 30px;
+  margin-top: 10px;
+  padding: 6px 20px;
+  border-radius: 5em;
+  line-height: 30px;
+  background-color: #2AB7CA;
+  color: white;
+  font-size: 30px;
+  border: 2px solid #2AB7CA;
+}
+.footer-btn a:hover {
+  color: white;
+  background: #2396A6;
+  border-color: #2396A6;
+  transition: 0.3s, ease;
+}

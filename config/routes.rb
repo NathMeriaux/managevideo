@@ -17,7 +17,9 @@ Rails.application.routes.draw do
     end
   end
 
-  root 'videos#index'
+  # root 'videos#index'
+
+  root 'pages#home'
 
   # get 'videos/index'
 
