@@ -17,7 +17,7 @@
 .banner p {
   font-size: 20px;
   font-weight: lighter;
-  color: rgba(255, 255, 255, 0.7);
+  color: white;
   margin-bottom: 20px;
 }
 
@@ -29,4 +29,14 @@
   color: #2396A6;
   border-color: #2396A6;
   transition: 0.3s, ease;
+}
+.banner-content {
+  width: 100%;
+}
+.banner img {
+  width: 250px;
+  height: 250px;
+  opacity: 0.9;
+  border-radius: 20px;
+  border: 0;
 }

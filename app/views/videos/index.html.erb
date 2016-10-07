@@ -14,7 +14,7 @@
               <h4><strong>Catégorie :</strong> <%= video.category %></h4>
               <div class="videowrapper">
                 <% if video.url? %>
-                  <iframe  src=<%= video.url %> frameborder="0" allowfullscreen autoplay=""></iframe>
+                  <iframe  src=<%= video.url %> frameborder="0" allowfullscreen >  </iframe>
                 <% else %>
                   <%= video.file %>
                 <% end %>
