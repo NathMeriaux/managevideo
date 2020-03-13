@@ -30,7 +30,7 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'simple_form'
 gem "font-awesome-sass"
 
-gem "administrate", "~> 0.2.2"
+gem "administrate", "~> 0.13.0"
 gem 'bourbon'
 gem "figaro"
 gem 'cloudinary'
